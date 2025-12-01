@@ -1,0 +1,17 @@
+{
+  "title": "How can you help?",
+  "options": [
+    {
+      "title": "Donate",
+      "description": "Help us provide food and shelter for stray animals."
+    },
+    {
+      "title": "Virtual Adoption",
+      "description": "Give a second chance to a furry friend."
+    },
+    {
+      "title": "Be a Volunteer",
+      "description": "Join our team and support CARPE's efforts."
+    }
+  ]
+}

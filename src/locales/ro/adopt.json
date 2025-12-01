@@ -1,0 +1,31 @@
+{
+  "title": "Adoptă Virtual",
+  "filters": {
+    "all": "Toate",
+    "dogs": "Câini",
+    "cats": "Pisici",
+    "other": "Altele"
+  },
+  "successTitle": "Povești de Succes",
+  "stories": {
+    "flori": {
+      "name": "Flori",
+      "text": "\"A deține un câine salvat a fost întotdeauna un vis pentru familia noastră, chiar dacă nu doream să avem un al treilea câine la momentul respectiv. Avem multă experiență cu câinii, ne place să dedicăm timp și efort lor și, cum cei doi ciobănești belgieni ai noștri sunt uimitor de amabili, ne-am gândit că ar fi o potrivire bună pentru un catel mai timid într-o zi. Și apoi, într-o zi, am deschis pagina de adoptie a lui Flori. Totul s-a legat: caracterul ei părea a fi exact ceea ce căutam. Un câine timid cu o inimă de aur. Flori a avut dificultăți, deoarece alți câini o tachinau și nu se apăra deloc. Am avut un sentiment puternic că vrem să-i arătăm o viață cu siguranță si un mediu liniștit. Pe 26 februarie, de ziua mea, am condus sute de kilometri si am adus-o acasă din orașul meu natal, Tuusula. Flori ne-a adus atât de multă bucurie. A fost o satisfacție să-i vedem curajul, bunătatea și curiozitatea pentru viață. Se bucură de lucrurile mărunte. Apropo, nu a fost deloc timidă! O cățelușă foarte calmă, care își iubește oamenii și frații belgieni, începe să cunoască alți câini și este calmă în aproape orice. Are un simț al umorului grozav. Este frumoasă pe dinăuntru și pe dinafară. Suntem foarte recunoscători pentru această cățelușă uimitoare și așteptăm cu nerăbdare viitoare aventuri alături de ea. Vă mulțumim că ați salvat-o!\""
+    },
+    "kasi": {
+      "name": "Kasi",
+      "text": "Kasi a fost găsită lovită de mașină în mijlocul unei seri de ianuarie foarte friguroase. Cu multă răbdare, timp – peste 6 luni și mii de euro mai târziu, Kasi este bine și este un câine minunat, jucăuș și iubitor. Recuperările miraculoase nu se pot întâmpla fără curajul de a salva un câine rănit, efort, timp, servicii veterinare excelente și mult ajutor. Donațiile voastre au făcut diferența pentru Kasi, diferența dintre durere și sănătate, dintre moarte și viață. Vă rugăm să continuați să ne ajutați, astfel încât să putem transforma fiecare catel salvat într-un câine jucăuș și fericit, precum Kasi."
+    },
+    "dasha": {
+      "name": "Dasha",
+      "text1": "Povestea Dasheei ar fi putut fi cu totul alta dacă Carmen nu ar fi luat-o din mijlocul drumului, într-o noapte rece de decembrie din 2022. Probabil avea un stăpân, pentru că era obișnuită cu oamenii și a alergat direct la mașină. A fost puțin timidă la început, loc nou, oameni noi, prieteni noi. A fost precaută, deși și-a acceptat noua situație destul de repede.",
+      "text2": "\"Când a ajuns acasă pentru prima dată, s-a uitat în jur timp de 15 minute, apoi a sărit în brațele mele și a adormit. Îi iubește pe toți, uneori vrea să salute fiecare persoană pe care o întâlnim la plimbări. Nu a fost niciodată timidă cu oamenii noi. Este incredibil cum se pot comporta diferiți câini când ajung acasă. Este foarte jucăușă, cred că s-a jucat cu jucării în prima ei noapte. A dormit și în patul nostru în prima ei noapte acasă și aproape în fiecare noapte de atunci. Este cu adevărat curajoasă și jucăușă, o fetiță minunată!\""
+    },
+    "miruna": {
+      "name": "Miruna",
+      "text1": "Nu este un câine, ci un alt suflet salvat. Există o poveste tristă în spatele fotografiei și se numește realitate, din păcate.",
+      "text2": "Carmen: \"Este genul de realitate pe care o cunoaștem, care ne înconjoară în fiecare zi, dar de data aceasta m-a lovit atât de tare în față, încât a trebuit să acționez. Pur și simplu nu m-aș putea suporta dacă nu aș face-o. Miruna era un vițel de 3 luni care stătea la coadă pentru a fi sacrificat într-o curte. Porțile erau larg deschise, așa că am văzut un alt vițel care tocmai fusese sacrificat și întins pe o bucată mare de plastic în fața acelor porți deschise. Mi s-a făcut rău la stomac .. In acest timp,  Miruna era trasă de 2 bărbați la locul de sacrificare. Întregul spectacol a fost cel puțin grotesc și nu voi împărtăși alte detalii care îmi vor rămâne în minte pentru totdeauna. Cumva, am găsit curajul să intru în curte și am cerut un preț pentru viața vițelului. Nu au vrut să audă la început, dar am insistat până când au renunțat și m-au lăsat să cumpăr vițica. Am plătit jumătate din sumă și am convenit să o lase în viață și să mai mai poata suge lapte de la mama ei încă o lună, ca să poată crește sănătoasă. Un vițel de 3 luni nu era ceea ce aveam nevoie în adăpost. Dar era ceea ce era nevoie sa fac pentru ca Miruna sa rămâna în viață. Ea va trăi acum atâta timp cât poate trăi o vacă fericită, departe de teama unui destin care sa o duca la sacrificare. Miruna va fi o vitica iubita, nu una sacrificata, ceea ce face toată diferența din lume. Ea va avea un loc special în Carpe și unul și mai special în inima mea.\"",
+      "text3": "Numele ei este Miruna. Se spune că numele se traduce prin Cel care aduce pacea. Merită cu adevărat o viață liniștită și lungă. Aproape 2 ani de când Miruna este acasă, făcând dansul vieții, în loc să aștepte la coadă pentru a fi sacrificată. Nu mai este un vițel, dar încă fericită, sănătoasă și veselă cât poate fi."
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "How you can help",
+  "intro": "We save lives every day, but we need help to continue. Fortunately, there are many ways you can support our work – from 1 euro/month donations to virtual adoptions or sharing our posts.",
+  "highlight": "❤️ Any help is appreciated and goes directly towards doing good.",
+
+  "items": {
+    "donationsTitle": "Any donation to our ING / PayPal / Revolut accounts",
+    "legalName": "CARPE Animal Protection Association",
+
+    "monthlyDonationsTitle": "Donations to our monthly fundraising campaigns",
+    "monthlyDonationsText": "Join our monthly campaigns – every contribution counts!",
+
+    "birthdayTitle": "Donate your birthday on Galantom.ro",
+
+    "benevityTitle": "Donate through Benevity",
+    "benevityText": "If you work in a company using Benevity, you can donate quickly through this platform.",
+
+    "teamingTitle": "Join the Teaming community",
+    "teamingText": "An automatic donation of just 1 euro/month.",
+
+    "virtualAdoptionTitle": "Virtual adoption",
+    "virtualAdoptionText": "Become an adoptive parent for a shelter animal.",
+    "virtualAdoptionLink": "See the program on Facebook",
+
+    "buyDonateTitle": "Buy & donate",
+    "buyDonateText": "Buy handmade decorations – the entire amount goes to CARPE.",
+
+    "pentruAnimaleTitle": "Buy from pentruanimale.ro",
+    "pentruAnimaleLink": "Donate 5 lei for CARPE animals",
+
+    "tax35Title": "Donate 3.5% of your income tax",
+    "tax35Link": "Complete the form here",
+
+    "company20Title": "Companies: donate 20% of your profit tax",
+    "company20Text": "If your company pays profit tax, you can direct 20% of it to CARPE.",
+
+    "volunteerTitle": "Volunteer in our shelter",
+    "volunteerText": "The shelter is located 40 km from Bucharest. We always need help — cleaning, feeding, or care.",
+
+    "ambassadorTitle": "Become a CARPE Ambassador",
+    "ambassadorText": "Like & Share! Spread our posts to help us reach more people. Visibility saves lives!"
+  }
+}

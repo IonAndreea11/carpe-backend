@@ -1,0 +1,43 @@
+{
+  "title": "Cum poți ajuta",
+  "intro": "Salvăm vieți în fiecare zi, dar avem nevoie de ajutor pentru a continua. Din fericire, sunt multe modalități prin care poți sprijini activitatea noastră: de la donații de 1 euro/lună, la adopții virtuale sau distribuirea postărilor noastre.",
+  "highlight": "❤️ Orice ajutor este apreciat și este folosit în continuare pentru a face bine.",
+
+  "items": {
+    "donationsTitle": "Orice donație către conturile noastre ING / PayPal / Revolut",
+    "legalName": "Asociația pentru protecția animalelor CARPE",
+
+    "monthlyDonationsTitle": "Donații către strângerile lunare de fonduri",
+    "monthlyDonationsText": "Participă la campaniile noastre lunare – fiecare contribuție contează!",
+
+    "birthdayTitle": "Donează-ți ziua de naștere pe Galantom.ro",
+
+    "benevityTitle": "Donează prin platforma Benevity",
+    "benevityText": "Dacă lucrezi într-o companie care folosește Benevity, poți dona rapid prin această platformă.",
+
+    "teamingTitle": "Alătură-te comunității Teaming",
+    "teamingText": "O donație automată de doar 1 euro/lună.",
+
+    "virtualAdoptionTitle": "Adopție virtuală",
+    "virtualAdoptionText": "Devino părinte adoptiv pentru un animal din adăpost.",
+    "virtualAdoptionLink": "Vezi programul pe Facebook",
+
+    "buyDonateTitle": "Cumpără și donează",
+    "buyDonateText": "Cumpără decorațiuni handmade – întreaga sumă este donată către CARPE.",
+
+    "pentruAnimaleTitle": "Cumpără de pe pentruanimale.ro",
+    "pentruAnimaleLink": "Donează 5 lei pentru animalele din CARPE",
+
+    "tax35Title": "Donează 3,5% din impozitul pe venit",
+    "tax35Link": "Completează formularul aici",
+
+    "company20Title": "Companii: donează 20% din impozitul pe profit",
+    "company20Text": "Dacă ai o firmă plătitoare de impozit pe profit, poți direcționa 20% din acesta către CARPE.",
+
+    "volunteerTitle": "Fii voluntar în adăpostul nostru",
+    "volunteerText": "Adăpostul este localizat la 40 km de București. Avem mereu nevoie de ajutor — fie pentru curățenie, hrănire sau îngrijire.",
+
+    "ambassadorTitle": "Devino Ambasador CARPE",
+    "ambassadorText": "Like & Share! Distribuie postările noastre pentru a ne ajuta să ajungem la mai mulți oameni. Vizibilitatea salvează vieți!"
+  }
+}

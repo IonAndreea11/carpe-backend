@@ -1,0 +1,21 @@
+{
+  "title": "The CARPE Mission",
+  "subtitle": "Care. Adopt. Rescue. Protect. Educate.",
+
+  "mission": {
+    "careTitle": "Care",
+    "careText": "We have in our care almost 300 souls: ~220 dogs, 40 cats, 4 rabbits and a cow. Each of them were rescued from difficult situations, from the streets, highways, fields, or shelters where they would have had no chance of a decent life. Every day we make sure that they are safe and away from danger, that they have warm dog houses, enough food and medical care whenever they need it. Our shelter is a temporary station between Rescue and Adoption and although we want them to spend as little time as possible here, we do our best to make their stay as comfortable as possible.",
+
+    "adoptTitle": "Adopt",
+    "adoptText": "Approximately 80 dogs find their own family every year and forget life on the streets, in chains or in shelters.  Almost 700 dogs have gone to their homes since CARPE started its activity. Our partners find the best families for puppies, after observing their behavior and habits, for the best possible match. Every dog left for adoption means a free place for another to be saved.",
+
+    "rescueTitle": "Rescue",
+    "rescueText": "Our shelter does not have enough places for the number of cases we meet every day. Puppies and cats abandoned, sick, hit by cars and left on the side of the roads. We intervene every time we can, within the limits of places and possibilities. Any rescued animal means a place, medical checks, vaccination schedule, deworming, adaptation, evaluation and promotion for adoption.",
+
+    "protectTitle": "Protect",
+    "protectText": "All our animals come from difficult situations and although life in the shelter is not ideal, for them it becomes a safe space, a space where they feel protected from the dangers of the street, cars, hunger, thirst, beatings, diseases, suffering and in some cases even death. Past experiences and dangers lead to a dog's fear and trauma, which are visible in its behavior. The first step when they arrive at Carpe is to feel safe and protected.",
+
+    "educateTitle": "Educate",
+    "educateText": "Every time we have the opportunity, we share our experience with children and adults: from the care that an animal needs,  to the importance of sterilization of animals, the negative impact of abandonment, the responsibility of adoption."
+  }
+}

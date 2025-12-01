@@ -1,0 +1,21 @@
+{
+  "title": "Misiunea CARPE",
+  "subtitle": "Care. Adopt. Rescue. Protect. Educate.",
+
+  "mission": {
+    "careTitle": "Care",
+    "careText": "Avem în grijă aproape 300 suflete: 220 căței, 40 pisici și o văcuță. Fiecare dintre ei salvați din situații la limită, de pe străzi, șosele, câmpuri, sau adăposturi unde nu ar fi avut nicio șansă la o viață decentă. În fiecare zi ne asigurăm că sunt în siguranță și departe de pericole, că au cotețe călduroase, mâncare suficientă și îngrijire medicală, oricând au nevoie. Adăpostul nostru este o stație intermediară între Salvare și Adopție și deși ne dorim să petreacă cât mai puțin timp aici, facem tot posibilul că șederea lor să fie cât mai confortabilă.",
+
+    "adoptTitle": "Adopt",
+    "adoptText": "Aproximativ 80 de căței își găsesc propria familie în fiecare an și uită de viață pe străzi, în lanț sau din adăpost. Aproape 700 de căței au plecat la casele lor de când există CARPE. Partenerii noștri găsesc cele mai bune familii pentru căței, după ce le observă comportamentul și obiceiurile, pentru o potrivire cât mai bună. Fiecare cățel plecat în adopție înseamnă un loc liber pentru un altul să fie salvat.",
+
+    "rescueTitle": "Rescue",
+    "rescueText": "Adăpostul nostru nu are suficiente locuri pentru câte cazuri întâlnim în fiecare zi. Căței și pisici abandonați, bolnavi, loviți de mașini sau lăsați la marginea drumurilor. Intervenim de fiecare dată când putem, în limita locurilor și a posibilităților. Orice animal salvat înseamnă loc, verificări medicale, schema de vaccinare, deparazitare, adaptare, evaluare și promovare pentru adopție.",
+
+    "protectTitle": "Protect",
+    "protectText": "Toate animalele noastre provin din situații dificile și deși viața în adăpost nu este ideală, pentru ei devine un spațiu sigur — un loc în care se simt protejați de pericolele străzii, de mașini, de foamete, de bătaie, de boli și de suferință. Experiențele trăite pot duce la frică și traumă, vizibile în comportamentul lor. Primul pas când ajung la Carpe este să se simtă în siguranță.",
+
+    "educateTitle": "Educate",
+    "educateText": "De fiecare dată când avem ocazia, împărtășim experiența noastră cu copii și adulți: de la grija față de animale, importanța sterilizării, impactul negativ al abandonului și responsabilitatea adopției."
+  }
+}

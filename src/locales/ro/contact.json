@@ -1,0 +1,11 @@
+{
+  "title": "Contact",
+  "name": "Nume complet",
+  "email": "Adresă de email",
+  "message": "Mesajul tău",
+  "send": "Trimite mesajul",
+  "sending": "Se trimite...",
+  "success": "Mesaj trimis cu succes!",
+  "error": "Eroare la trimitere. Încearcă din nou.",
+  "subtitle": "Ai întrebări? Scrie-ne!"
+}

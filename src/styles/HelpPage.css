@@ -1,0 +1,120 @@
+.help-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 20px 60px;
+  background-color: transparent;
+  color: var(--color-green);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.help-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-repeat: repeat;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.help-container {
+  max-width: 950px;
+  margin: 0 auto;
+  background-color: var(--color-green-background2);
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.help-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  color: var(--color-green);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+.help-intro {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.help-highlight {
+  text-align: center;
+  color: var(--color-green);
+  font-weight: 600;
+  margin: 20px 0 40px;
+  font-size: 1.1rem;
+}
+
+.help-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.help-item {
+  background-color: var(--color-white);
+  border-left: 5px solid var(--color-green);
+  border-radius: 10px;
+  padding: 20px 25px;
+  box-shadow: 0 2px 8px var(--color-dark-transparent);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.help-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px var(--color-dark-transparent);
+}
+
+.help-item h2 {
+  color: var(--color-green);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.help-item p {
+  color: var(--color-text2);
+  line-height: 1.6;
+}
+
+.help-item a {
+  color: var(--color-green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.help-item a:hover {
+  text-decoration: underline;
+}
+
+.help-item ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.help-item li {
+  color: var(--color-text2);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .help-container {
+    padding: 25px 20px;
+  }
+  .help-title {
+    font-size: 2rem;
+  }
+  .help-item h2 {
+    font-size: 1.1rem;
+  }
+}

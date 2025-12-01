@@ -1,0 +1,212 @@
+:root{
+  --green:#0d7633;
+  --light-green:#5aba59;
+  --light-green2:#d2ead8;
+  --light-green3:#a2d4ae;
+  --transparent-green:rgba(90, 186, 89,0.3);
+  --white: #ffffff;
+  --gray: #333;
+  --light-gray: #ccc;
+}
+
+.page-animal-details {
+  background-color: #e8f3ec; 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.page-animal-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #e8f3ec;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  gap: 2rem;
+}
+
+/* ===== LEFT COLUMN ===== */
+.page--animal-left {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page-animal-photo {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.page--animal-left h2 {
+  font-size: 2rem;
+  color: #006b3c;
+  margin: 1rem 0 0.5rem;
+}
+
+.page-gender-tag {
+  background-color: #d8f1df;
+  color: #006b3c;
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.page-adopt-button {
+  background-color: #006b3c;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.page-adopt-button:hover {
+  background-color: #00994d;
+  transform: scale(1.05);
+}
+
+/* ===== RIGHT COLUMN ===== */
+.page-animal-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.page-info-box {
+  background-color: #ffffff;
+  border: 1px solid #b9cdbc;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.page-info-box h3 {
+  font-size: 1.2rem;
+  color: #2e5c3d;
+  margin-bottom: 0.8rem;
+}
+
+.page-info-box p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0.4rem 0;
+}
+
+.page-info-box strong {
+  color: #1c4b2e;
+}
+
+/* ===== MODAL FORM ===== */
+.page-adopt-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.page-adopt-modal {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease;
+}
+
+.page-adopt-modal h2 {
+  color: #006b3c;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.page-adopt-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.page-adopt-modal input {
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.page-adopt-form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.page-adopt-cancel-btn,
+.page-adopt-submit-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.page-adopt-cancel-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.page-adopt-cancel-btn:hover {
+  background-color: #bbb;
+}
+
+.page-adopt-submit-btn {
+  background-color: #006b3c;
+  color: white;
+}
+
+.page-adopt-submit-btn:hover {
+  background-color: #00994d;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .page-animal-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-animal-right {
+    width: 100%;
+  }
+
+  .page-info-box {
+    width: 100%;
+  }
+}

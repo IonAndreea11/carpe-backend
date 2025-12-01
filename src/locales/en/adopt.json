@@ -1,0 +1,31 @@
+{
+  "title": "Virtual Adoption",
+  "filters": {
+    "all": "All",
+    "dogs": "Dogs",
+    "cats": "Cats",
+    "other": "Other"
+  },
+  "successTitle": "Success Stories",
+  "stories": {
+    "flori": {
+      "name": "Flori",
+      "text": "Owning a rescue dog has always been a dream for our family even though we weren't looking to get a third dog at that time. We have lots of experience on dogs, we love to put time and effort to them and as our two belgian shepherds are amazingly kind we figured it would be a good match for a shyer individual some day. And then one day I opened the page of Flori. Everything clicked: her character seemed to be just that we were looking for. A shy dog with a golden heart. Flori had difficulties as other dogs were teasing her and she didn't defend herself at all. We got a strong feeling that we want to show her a life with security, peaceful environment and a kind pack. On February 26th, my birthday, we drove hundreds of kilometers to get her home from my hometown Tuusula. Flori has brought us so much joy. It has been rewarding to get to see her braveness, kindness and curiosity for life. Enjoying little things. Growth. She has been anything but shy by the way! Very easygoing dog with great nerves, loves her humans and belgian brothers, is getting to know other dogs and is calm in pretty much everything. She has great sense of humor. She is beautiful inside out. We are very grateful for this amazing dog and looking forward for future adventures with her. Thank you for saving her!"
+    },
+    "kasi": {
+      "name": "Kasi",
+      "text": "Kasi was found hit by car in the middle of a very cold January evening. With lots of patience, time – more than 6 months and thousands of euro later, Kasi is well and a gorgeous playful and loving dog. Miraculous recoveries can’t happen without courage to rescue an injured dog, effort, time, excellent vet services and lots of help. Your Donations made a difference for Kasi, the difference between pain and health, between death and life. Please keep on helping us so we can turn each rescue into a playful and happy dog, like Kasi."
+    },
+    "dasha": {
+      "name": "Dasha",
+      "text1": "Dasha's story could have been a very different one if Carmen hadn't picked her up from the middle of the road, on a cold December night in 2022. She probably had an owner, because she was used to people and ran directly to the car. She was a bit shy at the beginning, new place, new people, new friends. She was cautious, although she accepted her new situation quite fast.",
+      "text2": "\"When she got home for the first time she looked around for 15 minutes and then she jumped to my lap and fell asleep. She loves everyone, sometimes she wants to greet every person we pass on our walks. Never been shy towards new people. It is crazy how different dogs can act when they get home. She is very playful, I think she played with toys on her first night. She also slept in our bed on her first night at home and almost every night ever since. She is really brave and playful, lovely girl!\""
+    },
+    "miruna": {
+      "name": "Miruna",
+      "text1": "Not a dog, but another rescued soul. There is a sad story behind the photo and it's called reality, unfortunately.",
+      "text2": "Carmen: \"It's the kind of reality that we know about, that surrounds us every day, but this time it hit me in the face so hard, that I had to take action. I just couldn't stand myself if I didn't. Miruna was a 3 months old calf that was staying in line to be sacrificed in a courtyard. The gates were wide open, so I got to see another calf that just have been slaughtered and was ripped out of skin, just lying on a big plastic piece in front of those open gates. Made me sick to my stomach .. And Miruna was being pulled by 2 men to the slaughtering place. The entire show was grotesque, to say the least and I won't share any other details that will stay on my mind forever. Somehow, I found the courage to enter the courtyard and asked for the price on the calf's life. They wouldn’t' t hear it at first, but I insisted until they gave up and they let me buy and own the calf. I paid half of the amount and we agreed to let her alive and still have milk from her mother for one more month, so she can grow healthy. A 3 months old calf was not what I needed in the shelter. But it was what she needed to stay alive. She will now live for as long as a happy cow can live, far away from the fear of a slaughtering destiny. I couldn't put a price on her life, I would have given everything they asked for. But now I have to put a price on cost of living at Carpe and ask for help to buy special food for her on a monthly basis (the food for her will be around 800 lei/month). Miruna will be a beloved calf, not a slaughtered one, which makes all the difference in the world. She will have a special place in Carpe and an even more special one in my heart. \"",
+      "text3": " Her name is Miruna. They say the name translates into The one that brings peace. She truly deserves a peaceful and long life. Please consider helping me offering her the life she deserves.Almost 2 years since Miruna has been at home, performing the dance of life, instead of waiting in line to be slaughtered.She is no longer a calf, but still happy and healthy and joyful as she can be."
+    }
+  }
+}

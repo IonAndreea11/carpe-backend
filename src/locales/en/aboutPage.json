@@ -1,0 +1,57 @@
+{
+  "title": "CARPE - Care. Adopt. Rescue. Protect. Educate.",
+
+  "subtitle": "Together we save lives, every single day.",
+
+  "p1": "CARPE is a non-profit animal rescue organization from Bucharest, Romania, founded in 2016 by Carmen Mandescu. Carmen has been a dedicated Volunteer in Animal Welfare since 2007 and a full time Rescuer since 2009.",
+
+  "p2": "She loves her animals as her children and takes very good care of them. The final goal is to find them forever families. Animal rescue in Romania is a never-ending activity. All the time we find abandoned dogs and cats which need care, food and safety. Since 2016 CARPE hosted over 1000 dogs and over 50 cats, most of them rescued from very difficult environments and situations. Almost 700 of Carmen’s rescues were adopted and left to their forever homes.",
+
+  "p3": "Carpe’s most important mission includes rescuing abandoned animals, caring for them, treating them when they need medical attention and finding forever homes for them. We have a shelter close to Bucharest. CARPE shelter is continuously hosting over 200 dogs, 40 cats, 4 rabbits and a cow, which was saved from slaughter. ",
+
+  "p4": "Carpe was built in the middle of nature, near a forest and a river, a place where dogs and cats can find safety and care while being promoted for adoption. Some of the dogs we rescue are shy or simply never get a request to be adopted. For these dogs, CARPE is their forever home and they rely on their rescuer to provide daily care, food, water and any necessary veterinary treatments. ",
+
+  "p5": "Besides Rescue and Adoption, We, together with the vets and sponsors are also organizing Spay&Neuter campaigns, especially in the rural part of Romania, where lots of dogs and puppies get dumped. CARPE is also involved, whenever possible, in Educational and Awareness Campaigns regarding Animal Welfare in Schools, Kindergarden and Workplaces that allow this kind of activity. CARPE’s activity depends entirely on donations and sponsorship to be able to care for animals. Our rescuers do everything out of responsibility, care and love for animals, on a voluntary basis. ",
+
+  "p6": "Carmen saves lives every day and we need constant help to keep doing it. Thank you for your support.",
+
+  "chapters": {
+    "c1Title": "The Beginning of CARPE",
+    "c2Title": "A Mission Without End",
+    "c3Title": "The Shelter & Care",
+    "c4Title": "A Place in Nature",
+    "c5Title": "Education & Community Support",
+    "c6Title": "Gratitude"
+  },
+
+  "stats": {
+    "dogs": "Dogs rescued",
+    "cats": "Cats rescued",
+    "adoptions": "Successful adoptions",
+    "sterilizations": "Annual sterilizations"
+  },
+
+  "actions": {
+    "sterilization": "Spay & Neuter",
+    "sterilizationText": "Regular campaigns in rural areas to reduce abandonment.",
+    "education": "Education",
+    "educationText": "Educational programs in schools and local communities.",
+    "volunteering": "Volunteering & Donations",
+    "volunteeringText": "Without kind people, we couldn't continue."
+  },
+
+  "timeline": {
+    "2016": "CARPE is founded",
+    "2017": "The shelter opens",
+    "2018": "First major spay/neuter campaign",
+    "2020": "500 adoptions",
+    "2024": "Shelter expansion"
+  },
+
+  "historyTitle": "Our Journey",
+  "galleryTitle": "Gallery",
+
+  "ctaTitle": "Thank you for being by our side",
+  "ctaButton": "See how you can help",
+  "contactButton": "Contact Us"
+}

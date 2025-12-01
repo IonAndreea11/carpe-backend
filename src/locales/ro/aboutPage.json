@@ -1,0 +1,56 @@
+{
+  "title": "CARPE - Care. Adopt. Rescue. Protect. Educate.",
+
+  "subtitle": "Împreună salvăm vieți, zi de zi.",
+
+  "p1": "CARPE este o organizație non-profit de salvare a animalelor din București, România, fondată în 2016 de Carmen Mandescu. Carmen a fost voluntar in domeniul bunăstării animalelor inca din 2007 și Rescuer cu normă întreagă din 2009.",
+
+  "p2": "Își iubește animalele ca pe copiii ei și are foarte multă grijă de fiecare, iar scopul final este să le găsească familii adoptive. Salvarea animalelor în România este o activitate fără sfârșit. Tot timpul găsim câini și pisici abandonați care au nevoie de îngrijire, hrană și siguranță. Din 2016 până acum, CARPE a găzduit peste 1000 de câini și peste 50 de pisici, salvate de cele mai multe ori din situatii si conditii dificile, greu de imaginat. In acest timp, peste 650 dintre cateii salvati au fost adoptati și au lasat in urma viata de pe strazi si din adapost.",
+
+  "p3": "Cea mai importantă misiune Carpe se refera la salvarea animalelor abandonate, apoi la îngrijirea lor, tratarea lor atunci când au nevoie de îngrijiri medicale și găsirea unei familii care sa ii adopte. Avem un adăpost aproape de București. Adăpostul CARPE găzduiește in permanenta peste 200 de câini, 40 de pisici, 4 iepuri și o vacă, care a fost si ea salvată de la sacrificare.",
+
+  "p4": "Carpe a fost construit în mijlocul naturii, lângă o pădure și un râu, un loc în care câinii și pisicile pot găsi siguranță și îngrijire în timp ce sunt promovați spre adopție. Unii dintre câinii pe care îi salvăm sunt timizi sau pur și simplu nu primesc niciodată o cerere de adoptie. Pentru acești câini, CARPE este casa lor pentru totdeauna și se bazează pe noi pentru a oferi îngrijire zilnică, hrană, apă și orice tratament veterinar necesar.",
+
+  "p5": "Pe lângă Salvare și Adopție, Noi, împreună cu veterinarii și sponsorii organizăm și campanii de Sterilizare, în special în zona rurală a României, unde mulți câini și căței sunt abandonati. CARPE este implicată, ori de câte ori este posibil, în campanii educaționale și de conștientizare privind bunăstarea animalelor în școli, grădinițe și locuri de muncă care permit acest gen de activitate. Activitatea CARPE depinde in totalitate de donatii si sponsorizari pentru a putea ingriji animalele. Facem totul din responsabilitate, grijă și dragoste față de animale, pe bază de voluntariat.",
+
+  "p6": "Carmen salvează vieți în fiecare zi și are nevoie de ajutor constant pentru a continua aceasta activitate. Vă mulțumim pentru sprijin.",
+
+  "chapters": {
+    "c1Title": "Începuturile CARPE",
+    "c2Title": "O misiune fără sfârșit",
+    "c3Title": "Adăpostul și îngrijirea",
+    "c4Title": "Un loc în natură",
+    "c5Title": "Educație și sprijin",
+    "c6Title": "Recunoștință"
+  },
+
+  "stats": {
+    "dogs": "Câini salvați",
+    "cats": "Pisici salvate",
+    "adoptions": "Adopții reușite",
+    "sterilizations": "Sterilizări anual"
+  },
+
+  "actions": {
+    "sterilization": "Sterilizare",
+    "sterilizationText": "Campanii regulate în mediul rural pentru reducerea abandonului.",
+    "education": "Educație",
+    "educationText": "Programe educaționale în școli și comunități.",
+    "volunteering": "Voluntariat & Donații",
+    "volunteeringText": "Fără oameni buni, nu am putea continua."
+  },
+  "timeline": {
+    "2016": "Înființarea CARPE",
+    "2017": "Deschiderea adăpostului",
+    "2018": "Prima campanie majoră de sterilizare",
+    "2020": "500 de adopții",
+    "2024": "Extinderea adăpostului"
+  },
+
+  "historyTitle": "Istoric",
+  "galleryTitle": "Galerie",
+
+  "ctaTitle": "Mulțumim că ești alături de noi",
+  "ctaButton": "Află cum poți ajuta",
+  "contactButton": "Contactați-ne"
+}
