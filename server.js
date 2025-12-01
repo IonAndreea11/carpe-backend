@@ -27,7 +27,12 @@ const PORT = 4000;
 // ==================== MIDDLEWARE ====================
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:4000",
+      "https://carpe-website.netlify.app",
+      " /.netlify.app$/",
+    ],
     credentials: true,
   })
 );
