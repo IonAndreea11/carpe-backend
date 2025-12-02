@@ -9,8 +9,15 @@ import path from "path";
 import fs from "fs";
 import { fileURLToPath } from "url";
 import nodemailer from "nodemailer";
+import { v2 as cloudinary } from "cloudinary";
 
 dotenv.config();
+
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.CLOUD_KEY,
+  api_secret: process.env.CLOUD_SECRET,
+});
 
 const { Pool } = pkg;
 const pool = new Pool({
@@ -28,31 +35,46 @@ app.use(
       "http://localhost:3000",
       "http://localhost:4000",
       "https://carpe-website.netlify.app",
-      " /.netlify.app$/",
+      /^https:\/\/.*\.netlify\.app$/,
     ],
     credentials: true,
   })
 );
 app.use(express.json());
 
+const upload = multer({ storage: multer.memoryStorage() });
+
+function uploadToCloudinary(fileBuffer, folder) {
+  return new Promise((resolve, reject) => {
+    const stream = cloudinary.uploader.upload_stream(
+      { folder },
+      (error, result) => {
+        if (error) reject(error);
+        else resolve(result);
+      }
+    );
+
+    stream.end(fileBuffer);
+  });
+}
+
 // ==================== UPLOADS SETUP ====================
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const uploadsDir = path.join(__dirname, "uploads");
-if (!fs.existsSync(uploadsDir)) {
-  fs.mkdirSync(uploadsDir);
-}
-app.use("/uploads", express.static(uploadsDir));
+// const uploadsDir = path.join(__dirname, "uploads");
+// if (!fs.existsSync(uploadsDir)) {
+//   fs.mkdirSync(uploadsDir);
+// }
+// app.use("/uploads", express.static(uploadsDir));
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, uploadsDir),
-  filename: (req, file, cb) =>
-    cb(null, Date.now() + path.extname(file.originalname)),
-});
-const upload = multer({ storage });
+// const storage = multer.diskStorage({
+//   destination: (req, file, cb) => cb(null, uploadsDir),
+//   filename: (req, file, cb) =>
+//     cb(null, Date.now() + path.extname(file.originalname)),
+// });
+// const upload = multer({ storage });
 
-// ==================== ENSURE ADMIN ====================
 async function ensureAdmin() {
   const adminEmail = process.env.ADMIN_EMAIL || "admin@example.com";
   const adminPassword = process.env.ADMIN_PASSWORD || "superSecret123";
@@ -183,16 +205,25 @@ app.get("/api/message/:id", async (req, res) => {
   }
 });
 
-// POST new article (bilingual)
+// POST new article (bilingual + Cloudinary image)
 app.post(
   "/api/message",
   verifyAdmin,
   upload.single("image"),
   async (req, res) => {
     const { title_ro, content_ro, title_en, content_en } = req.body;
-    const imageUrl = req.file ? `/uploads/${req.file.filename}` : null;
 
     try {
+      let imageUrl = null;
+
+      if (req.file) {
+        const uploadResult = await uploadToCloudinary(
+          req.file.buffer,
+          "carpe_articles"
+        );
+        imageUrl = uploadResult.secure_url;
+      }
+
       const result = await pool.query(
         `INSERT INTO articles 
           (title_ro, content_ro, title_en, content_en, image)
@@ -209,7 +240,7 @@ app.post(
   }
 );
 
-// PUT update article (bilingual)
+// PUT update article (bilingual + Cloudinary image)
 app.put(
   "/api/message/:id",
   verifyAdmin,
@@ -217,9 +248,18 @@ app.put(
   async (req, res) => {
     const { id } = req.params;
     const { title_ro, content_ro, title_en, content_en } = req.body;
-    const imageUrl = req.file ? `/uploads/${req.file.filename}` : null;
 
     try {
+      let imageUrl = null;
+
+      if (req.file) {
+        const uploadResult = await uploadToCloudinary(
+          req.file.buffer,
+          "carpe_articles"
+        );
+        imageUrl = uploadResult.secure_url;
+      }
+
       const result = await pool.query(
         `UPDATE articles SET 
             title_ro=$1,
@@ -256,7 +296,7 @@ app.delete("/api/message/:id", verifyAdmin, async (req, res) => {
 // ======================= PROJECTS =======================
 // =======================================================
 
-// GET all projects (returns RO+EN always)
+// GET all projects
 app.get("/api/projects", async (req, res) => {
   try {
     const result = await pool.query(
@@ -290,7 +330,7 @@ app.get("/api/projects/:id", async (req, res) => {
   }
 });
 
-// POST new project (bilingual + image)
+// POST new project (bilingual + Cloudinary image)
 app.post(
   "/api/projects",
   verifyAdmin,
@@ -299,9 +339,17 @@ app.post(
     const { title_ro, title_en, full_description_ro, full_description_en } =
       req.body;
 
-    const imageUrl = req.file ? `/uploads/${req.file.filename}` : null;
-
     try {
+      let imageUrl = null;
+
+      if (req.file) {
+        const uploadResult = await uploadToCloudinary(
+          req.file.buffer,
+          "carpe_projects"
+        );
+        imageUrl = uploadResult.secure_url;
+      }
+
       const result = await pool.query(
         `INSERT INTO projects
           (title_ro, title_en, full_description_ro, full_description_en, image)
@@ -318,7 +366,7 @@ app.post(
   }
 );
 
-// PUT update project (bilingual + image)
+// PUT update project (bilingual + Cloudinary image)
 app.put(
   "/api/projects/:id",
   verifyAdmin,
@@ -328,9 +376,17 @@ app.put(
     const { title_ro, title_en, full_description_ro, full_description_en } =
       req.body;
 
-    const imageUrl = req.file ? `/uploads/${req.file.filename}` : null;
-
     try {
+      let imageUrl = null;
+
+      if (req.file) {
+        const uploadResult = await uploadToCloudinary(
+          req.file.buffer,
+          "carpe_projects"
+        );
+        imageUrl = uploadResult.secure_url;
+      }
+
       const result = await pool.query(
         `UPDATE projects SET
             title_ro=$1,
@@ -371,15 +427,7 @@ app.delete("/api/projects/:id", verifyAdmin, async (req, res) => {
       return res.status(404).json({ error: "Proiectul nu a fost găsit" });
     }
 
-    const imagePath = project.rows[0].image
-      ? path.join(__dirname, project.rows[0].image)
-      : null;
-
     await pool.query("DELETE FROM projects WHERE id = $1", [id]);
-
-    if (imagePath && fs.existsSync(imagePath)) {
-      fs.unlinkSync(imagePath);
-    }
 
     res.json({ success: true });
   } catch (err) {
@@ -427,7 +475,7 @@ app.get("/api/animals/:id", async (req, res) => {
   }
 });
 
-// POST animal
+// POST animal (Cloudinary image)
 app.post(
   "/api/animals",
   verifyAdmin,
@@ -436,7 +484,15 @@ app.post(
     try {
       const { name, description_ro, description_en, type } = req.body;
 
-      const imageUrl = req.file ? `/uploads/${req.file.filename}` : null;
+      let imageUrl = null;
+
+      if (req.file) {
+        const uploadResult = await uploadToCloudinary(
+          req.file.buffer,
+          "carpe_animals"
+        );
+        imageUrl = uploadResult.secure_url;
+      }
 
       const result = await pool.query(
         `INSERT INTO animals 
@@ -454,7 +510,7 @@ app.post(
   }
 );
 
-// PUT animal
+// PUT animal (Cloudinary image)
 app.put(
   "/api/animals/:id",
   verifyAdmin,
@@ -464,7 +520,15 @@ app.put(
     const { name, description_ro, description_en, type } = req.body;
 
     try {
-      const imageUrl = req.file ? `/uploads/${req.file.filename}` : null;
+      let imageUrl = null;
+
+      if (req.file) {
+        const uploadResult = await uploadToCloudinary(
+          req.file.buffer,
+          "carpe_animals"
+        );
+        imageUrl = uploadResult.secure_url;
+      }
 
       const result = await pool.query(
         `UPDATE animals
@@ -558,52 +622,6 @@ app.post("/api/contact", async (req, res) => {
     res.status(500).json({ error: "Eroare la trimiterea emailului." });
   }
 });
-
-// =======================================================
-// ======================== ADOPT MAIL ====================
-// =======================================================
-
-// app.post("/api/adopt", async (req, res) => {
-//   const { firstName, lastName, birthDate, email, phone, animalName } = req.body;
-
-//   if (!firstName || !lastName || !email || !phone) {
-//     return res.status(400).json({ error: "Toate câmpurile sunt obligatorii" });
-//   }
-
-//   try {
-//     const transporter = nodemailer.createTransport({
-//       host: process.env.SMTP_HOST,
-//       port: process.env.SMTP_PORT,
-//       secure: process.env.SMTP_SECURE === "true",
-//       auth: {
-//         user: process.env.SMTP_USER,
-//         pass: process.env.SMTP_PASS,
-//       },
-//     });
-
-//     const message = {
-//       from: `"Adoption Request" <${process.env.SMTP_USER}>`,
-//       to: process.env.ADMIN_EMAIL,
-//       subject: `Cerere adopție pentru ${animalName}`,
-//       html: `
-//         <h3>Detalii cerere adopție:</h3>
-//         <p><b>Animal:</b> ${animalName}</p>
-//         <p><b>Nume:</b> ${lastName}</p>
-//         <p><b>Prenume:</b> ${firstName}</p>
-//         <p><b>Data nașterii:</b> ${birthDate}</p>
-//         <p><b>Email:</b> ${email}</p>
-//         <p><b>Telefon:</b> ${phone}</p>
-//       `,
-//     };
-
-//     await transporter.sendMail(message);
-
-//     res.json({ success: true, message: "Cererea a fost trimisă cu succes!" });
-//   } catch (err) {
-//     console.error("Eroare trimitere email:", err);
-//     res.status(500).json({ error: "Eroare la trimiterea emailului" });
-//   }
-// });
 
 // =======================================================
 
