@@ -12,6 +12,7 @@ import nodemailer from "nodemailer";
 import { v2 as cloudinary } from "cloudinary";
 
 dotenv.config();
+console.log("DATABASE_URL exists:", !!process.env.DATABASE_URL);
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
@@ -22,7 +23,10 @@ cloudinary.config({
 const { Pool } = pkg;
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false },
+  ssl:
+    process.env.NODE_ENV === "production"
+      ? { rejectUnauthorized: false }
+      : false,
 });
 
 const app = express();
