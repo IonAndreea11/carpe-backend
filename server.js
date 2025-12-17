@@ -35,12 +35,19 @@ const PORT = 4000;
 // ==================== MIDDLEWARE ====================
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "http://localhost:4000",
-      "https://carpe-website.netlify.app",
-      /^https:\/\/.*\.netlify\.app$/,
-    ],
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+
+      if (origin.startsWith("http://localhost")) {
+        return callback(null, true);
+      }
+
+      if (origin.endsWith(".netlify.app")) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("CORS not allowed"), false);
+    },
     credentials: true,
   })
 );
