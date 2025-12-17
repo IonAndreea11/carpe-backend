@@ -103,7 +103,10 @@ async function ensureAdmin() {
     console.error("Eroare la verificarea/crearea contului admin:", err);
   }
 }
-ensureAdmin();
+
+if (process.env.NODE_ENV !== "production") {
+  ensureAdmin();
+}
 
 // ==================== LOGIN ====================
 app.post("/api/login", async (req, res) => {
