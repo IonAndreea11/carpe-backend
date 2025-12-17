@@ -30,7 +30,7 @@ const pool = new Pool({
 });
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 // ==================== MIDDLEWARE ====================
 app.use(
@@ -46,11 +46,12 @@ app.use(
         return callback(null, true);
       }
 
-      return callback(new Error("CORS not allowed"), false);
+      return callback(null, false);
     },
     credentials: true,
   })
 );
+app.options("*", cors());
 app.use(express.json());
 
 const upload = multer({ storage: multer.memoryStorage() });
