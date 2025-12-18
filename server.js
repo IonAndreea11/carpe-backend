@@ -33,31 +33,31 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 // ==================== MIDDLEWARE ====================
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://localhost:5173",
+  "https://carperescue.ro",
+  "https://www.carperescue.ro",
+];
+
 app.use(
   cors({
     origin: (origin, callback) => {
       if (!origin) return callback(null, true);
 
-      if (origin.startsWith("http://localhost")) {
+      if (allowedOrigins.includes(origin) || origin.endsWith(".netlify.app")) {
         return callback(null, true);
       }
 
-      if (origin.endsWith(".netlify.app")) {
-        return callback(null, true);
-      }
-
-      return callback(null, false);
+      console.log("CORS blocked origin:", origin);
+      return callback(new Error("Not allowed by CORS"));
     },
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
-app.use((req, res, next) => {
-  if (req.method === "OPTIONS") {
-    res.sendStatus(204);
-  } else {
-    next();
-  }
-});
+
 app.use(express.json());
 
 const upload = multer({ storage: multer.memoryStorage() });
