@@ -592,13 +592,25 @@ app.delete("/api/animals/:id", verifyAdmin, async (req, res) => {
 // =======================================================
 
 app.post("/api/contact", async (req, res) => {
-  const { name, email, message } = req.body;
-
-  if (!name || !email || !message) {
-    return res.status(400).json({ error: "Toate câmpurile sunt obligatorii." });
-  }
-
   try {
+    const { name, email, message } = req.body;
+
+    if (!name || !email || !message) {
+      return res
+        .status(400)
+        .json({ error: "Toate câmpurile sunt obligatorii." });
+    }
+
+    // DEBUG LOG (temporar)
+    console.log("SMTP CONFIG CHECK:", {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      secure: process.env.SMTP_SECURE,
+      user: process.env.SMTP_USER,
+      hasPass: !!process.env.SMTP_PASS,
+      receiver: process.env.CONTACT_RECEIVER,
+    });
+
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
@@ -609,38 +621,24 @@ app.post("/api/contact", async (req, res) => {
       },
     });
 
-    // EMAIL către tine
+    await transporter.verify(); // 🔥 foarte important
+
     await transporter.sendMail({
       from: `"CARPE Contact" <${process.env.SMTP_USER}>`,
       to: process.env.CONTACT_RECEIVER,
       subject: `Mesaj nou de la ${name}`,
       html: `
-        <h2>Mesaj nou de pe CARPE Website</h2>
+        <h2>Mesaj nou</h2>
         <p><b>Nume:</b> ${name}</p>
         <p><b>Email:</b> ${email}</p>
-        <p><b>Mesaj:</b><br>${message}</p>
+        <p>${message}</p>
       `,
     });
 
-    // EMAIL de confirmare către user
-    await transporter.sendMail({
-      from: `"CARPE Rescue" <${process.env.SMTP_USER}>`,
-      to: email,
-      subject: "Confirmare trimitere mesaj către CARPE",
-      html: `
-        <h2>Mulțumim pentru mesaj!</h2>
-        <p>Bună, <b>${name}</b>,</p>
-        <p>Am primit mesajul tău și echipa CARPE iți va răspunde cât mai curând.</p>
-        <p><i>Mesaj trimis:</i><br>${message}</p>
-        <p>O zi frumoasă!</p>
-        <p><b>CARPE Rescue Team</b></p>
-      `,
-    });
-
-    res.json({ success: true, message: "Mesaj trimis cu succes!" });
+    res.json({ success: true });
   } catch (err) {
-    console.error("Eroare la trimiterea emailului:", err);
-    res.status(500).json({ error: "Eroare la trimiterea emailului." });
+    console.error("CONTACT ERROR:", err);
+    res.status(500).json({ error: "Eroare la trimiterea mesajului." });
   }
 });
 
